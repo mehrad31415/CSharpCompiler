@@ -1,5 +1,5 @@
 # CSharpCompiler
-A code generator for a subset of C# which converts the code to SSM language (simple stack machine), a low level Assembly language. 
+**A code generator for a subset of C# which converts the code to SSM language (simple stack machine), a low level Assembly language. 
 
 The program is written in Haskell using the parser combinators library i.e., using the package uu-tc.
 
