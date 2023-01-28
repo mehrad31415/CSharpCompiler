@@ -58,4 +58,4 @@ class Hello
 
 ```
 
-For further information on the details please read the pdf
+For further information on the details please read the pdf.
