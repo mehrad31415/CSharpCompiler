@@ -1,0 +1,64 @@
+	Bsr main
+	HALT
+main:
+	LDR MP
+	LDRR MP SP
+	LDC 2
+	LDC 3
+	ADD
+	TRAP 0
+	LDC 0
+	AJS -1
+	LDC 97
+	TRAP 0
+	LDC 0
+	AJS -1
+	LDC 1
+	BRF 4
+	LDC 1
+	BRT 4
+	LDC 0
+	BRA 2
+	LDC 1
+	AND
+	TRAP 0
+	LDC 0
+	AJS -1
+	LDC 1
+	BRF 4
+	LDC 0
+	BRT 4
+	LDC 0
+	BRA 2
+	LDC 1
+	AND
+	TRAP 0
+	LDC 0
+	AJS -1
+	LDC 1
+	BRT 8
+	LDC 0
+	BRT 4
+	LDC 0
+	BRA 2
+	LDC 1
+	OR
+	TRAP 0
+	LDC 0
+	AJS -1
+	LDC 0
+	BRT 8
+	LDC 0
+	BRT 4
+	LDC 0
+	BRA 2
+	LDC 1
+	OR
+	TRAP 0
+	LDC 0
+	AJS -1
+	STS 0
+	AJS 1
+	LDRR SP MP
+	STR MP
+	RET

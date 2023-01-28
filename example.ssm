@@ -1,0 +1,116 @@
+	Bsr main
+	HALT
+main:
+	LDR MP
+	LDRR MP SP
+	AJS 1
+	LDC 1
+	LDS 0
+	LDLA 1
+	STA 0
+	AJS -1
+	STS -1
+	AJS 0
+	LDRR SP MP
+	STR MP
+	RET
+square:
+	LDR MP
+	LDRR MP SP
+	LDS -2
+	AJS 1
+	LDL 1
+	LDL 1
+	MUL
+	LDS 0
+	LDLA 2
+	STA 0
+	AJS -1
+	LDL 2
+	STR R3
+	AJS -1
+	LDRR SP MP
+	STR MP
+	RET
+	STS -1
+	AJS 0
+	LDRR SP MP
+	STR MP
+	RET
+abs:
+	LDR MP
+	LDRR MP SP
+	LDS -2
+	LDL 1
+	LDC 0
+	LT
+	BRF 15
+	LDC 0
+	LDL 1
+	SUB
+	LDS 0
+	LDLA 1
+	STA 0
+	AJS -1
+	BRA 4
+	STS 0
+	AJS 1
+	LDL 1
+	STR R3
+	AJS -1
+	LDRR SP MP
+	STR MP
+	RET
+	STS 0
+	AJS 1
+	LDRR SP MP
+	STR MP
+	RET
+fac:
+	LDR MP
+	LDRR MP SP
+	LDS -2
+	AJS 1
+	AJS 1
+	LDC 1
+	LDS 0
+	LDLA 3
+	STA 0
+	AJS -1
+	LDC 1
+	LDS 0
+	LDLA 2
+	STA 0
+	AJS -1
+	BRA 30
+	LDL 2
+	LDL 3
+	MUL
+	LDS 0
+	LDLA 2
+	STA 0
+	AJS -1
+	LDL 3
+	LDC 1
+	ADD
+	LDS 0
+	LDLA 3
+	STA 0
+	AJS -1
+	STS 0
+	AJS 1
+	LDL 3
+	LDL 1
+	LE
+	BRT -37
+	LDL 2
+	STR R3
+	AJS -1
+	LDRR SP MP
+	STR MP
+	RET
+	STS -2
+	AJS -1
+	LDRR SP MP
+	STR MP
+	RET
