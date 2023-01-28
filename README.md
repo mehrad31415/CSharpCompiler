@@ -1,9 +1,9 @@
 # CSharpCompiler
-**A code generator for a subset of C# which converts the code to SSM language (simple stack machine), a low level Assembly language. 
+*A code generator for a subset of C# which converts the code to SSM language (simple stack machine), a low level Assembly language.*
 
-The program is written in Haskell using the parser combinators library i.e., using the package uu-tc.
+##### The program is written in Haskell using the parser combinators library i.e., using the package uu-tc.
 
-The source codes has six files:
+##### The source codes has six files:
 
 * CSharpLex.hs: a lexical scanner for C# that transforms flat input (a string) into a list of tokens.
 * CSharpGram.hs: types and functions for parsing C#.
@@ -15,7 +15,7 @@ function.
 * ssmui.jar/ssm.jar: graphical simulator for the SSM. With this, you can run the generated code and test whether your code generator is working correctly.
 * ssm.bat/ssm.sh/ssm2.bat/ssm2.sh: wrapper script to call ssmui.jar/ssm.jar with the generated code.
 
-One example code that it can parse is as follows:
+##### One example code that it can parse is as follows:
 
 ```
 class Hello
